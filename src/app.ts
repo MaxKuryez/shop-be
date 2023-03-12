@@ -1,7 +1,10 @@
 import express, { ErrorRequestHandler } from "express";
-import shopRoutes from "routes/products.js"
+import shopRoutes from "./routes/products"
+import { json } from "body-parser";
 
 const app = express();
+
+app.use(json());
 
 app.use("/products", shopRoutes);
 
@@ -13,4 +16,4 @@ const errorHandler: ErrorRequestHandler = (err, req, res, next) => {
 
 app.use(errorHandler);
 
-app.listen(3000);
+app.listen(3080);
