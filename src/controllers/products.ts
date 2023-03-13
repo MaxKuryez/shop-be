@@ -14,5 +14,5 @@ export const createProduct: RequestHandler<Product> = (req, res, next) => {
 };
 
 export const getProduct: RequestHandler<Product> = (req, res, next) => {
-  res.status(201).json({products: Products});
+  res.status(201).json({products: Products, test: "na"});
 };
