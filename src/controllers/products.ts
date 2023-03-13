@@ -13,6 +13,6 @@ export const createProduct: RequestHandler<Product> = (req, res, next) => {
   res.status(201).json({message: "Created product!", product: newProduct});
 };
 
-export const getProduct: RequestHandler<Product> = (req, res, next) => {
-  res.status(201).json({products: Products, test: "na"});
+export const getProducts: RequestHandler<Product> = (req, res, next) => {
+  res.status(201).json({products: Products, test: "testaaa"});
 };

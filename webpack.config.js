@@ -1,4 +1,5 @@
 const path = require('path');
+const  FilterWarningsPlugin = require('webpack-filter-warnings-plugin')
 
 module.exports = {
   entry: [
@@ -24,4 +25,9 @@ module.exports = {
   resolve: {
     extensions: ['*', '.js', '.ts'],
   },
+  plugins: [
+    new FilterWarningsPlugin({
+        exclude: [/Critical dependency/]
+    })
+]
 }
